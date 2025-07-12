@@ -39,4 +39,4 @@
 
 1. **Clone or Download** this repository:
    ```bash
-   git clone https://github.com/your-username/SmartFilter.git
+   git clone https://github.com/Curry06/SmartFilter.git
