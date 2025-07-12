@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFilter Extension Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .demo-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4ECDC4, #45B7D1);
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .demo-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+        }
+        
+        .demo-header p {
+            margin: 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .demo-container {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .extension-popup {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        .gmail-mockup {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        .gmail-header {
+            background: #db4437;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        .email-list {
+            padding: 20px;
+        }
+        
+        .email-item {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+        }
+        
+        .email-item:last-child {
+            border-bottom: none;
+        }
+        
+        .email-sender {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .email-subject {
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        
+        .email-tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+        
+        .email-tag {
+            background-color: #FF6B6B;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        .features {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feature h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        
+        .installation-guide {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .installation-guide h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .installation-steps {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .installation-steps li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .installation-steps li:before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            background: #4ECDC4;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .installation-steps li:last-child {
+            border-bottom: none;
+        }
+        
+        .note {
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            border-left: 4px solid #4ECDC4;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>SmartFilter</h1>
+        <p>Automatically tag and organize your Gmail inbox using custom keywords</p>
+    </div>
+    
+    <div class="demo-container">
+        <div class="extension-popup">
+            <iframe src="popup-demo.html" width="380" height="600" frameborder="0"></iframe>
+        </div>
+        
+        <div class="gmail-mockup">
+            <div class="gmail-header">
+                <h3>Gmail Inbox</h3>
+            </div>
+            <div class="email-list">
+                <div class="email-item">
+                    <div class="email-sender">John Smith</div>
+                    <div class="email-subject">URGENT: Project deadline moved to tomorrow</div>
+                    <div class="email-tags">
+                        <span class="email-tag" style="background-color: #FF6B6B;">Important</span>
+                        <span class="email-tag" style="background-color: #dc3545;">Urgent</span>
+                    </div>
+                </div>
+                
+                <div class="email-item">
+                    <div class="email-sender">Finance Team</div>
+                    <div class="email-subject">Monthly invoice for subscription services</div>
+                    <div class="email-tags">
+                        <span class="email-tag" style="background-color: #28a745;">Finance</span>
+                        <span class="email-tag" style="background-color: #ffc107; color: #212529;">Invoice</span>
+                    </div>
+                </div>
+                
+                <div class="email-item">
+                    <div class="email-sender">Sarah Johnson</div>
+                    <div class="email-subject">Meeting notes from yesterday's call</div>
+                    <div class="email-tags">
+                        <span class="email-tag" style="background-color: #17a2b8;">Meeting</span>
+                    </div>
+                </div>
+                
+                <div class="email-item">
+                    <div class="email-sender">Support Team</div>
+                    <div class="email-subject">Welcome to our platform!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="features">
+        <div class="feature">
+            <h3>🎯 Smart Keyword Matching</h3>
+            <p>Add custom keywords and SmartFilter will automatically scan your emails to find matches. Perfect for catching important messages!</p>
+        </div>
+        
+        <div class="feature">
+            <h3>🏷️ Custom Tags & Colors</h3>
+            <p>Create personalized tags with custom colors. Organize your inbox visually with tags like "Urgent," "Finance," or "Projects."</p>
+        </div>
+        
+        <div class="feature">
+            <h3>⚡ Real-time Scanning</h3>
+            <p>SmartFilter monitors your Gmail inbox in real-time, automatically tagging new emails as they arrive.</p>
+        </div>
+        
+        <div class="feature">
+            <h3>📊 Usage Statistics</h3>
+            <p>Keep track of how many keywords you've set up and how many emails have been tagged to measure your organization success.</p>
+        </div>
+    </div>
+    
+    <div class="installation-guide">
+        <h2>How to Install SmartFilter</h2>
+        <ol class="installation-steps">
+            <li data-step="1">Download all extension files to a folder on your computer</li>
+            <li data-step="2">Open Chrome and navigate to <code>chrome://extensions/</code></li>
+            <li data-step="3">Enable "Developer mode" by clicking the toggle in the top right corner</li>
+            <li data-step="4">Click "Load unpacked" and select the folder containing the extension files</li>
+            <li data-step="5">Open Gmail and click the SmartFilter extension icon to start adding keywords</li>
+        </ol>
+        
+        <div class="note">
+            <strong>Note:</strong> This extension requires Chrome's Developer mode to install. It's designed to work exclusively with Gmail and respects your privacy by storing all data locally on your computer.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="20" fill="#4ECDC4"/>
+  <path d="M26 40L64 72L102 40" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 40H102V88C102 91.3137 99.3137 94 96 94H32C28.6863 94 26 91.3137 26 88V40Z" stroke="white" stroke-width="4" fill="none"/>
+  
+  <!-- Tag elements -->
+  <circle cx="88" cy="88" r="16" fill="#FFB347" stroke="white" stroke-width="3"/>
+  <path d="M80 88L84 92L96 80" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Additional tag -->
+  <circle cx="70" cy="70" r="12" fill="#FF6B6B" stroke="white" stroke-width="2"/>
+  <path d="M65 70L68 73L75 66" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Email lines -->
+  <line x1="35" y1="55" x2="65" y2="55" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="35" y1="62" x2="55" y2="62" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFilter Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>SmartFilter</h1>
+            <p class="subtitle">Auto-tag your emails with custom keywords</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="keywordCount">0</span>
+                <span class="stat-label">Keywords</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="taggedCount">0</span>
+                <span class="stat-label">Tagged Emails</span>
+            </div>
+        </div>
+
+        <div class="add-keyword-section">
+            <h3>Add New Keyword</h3>
+            <div class="input-group">
+                <input type="text" id="keywordInput" placeholder="Enter keyword (e.g., 'urgent', 'invoice')" maxlength="50">
+                <input type="text" id="tagInput" placeholder="Tag name (e.g., 'Important', 'Finance')" maxlength="30">
+                <select id="colorInput">
+                    <option value="#FF6B6B">Red</option>
+                    <option value="#4ECDC4">Teal</option>
+                    <option value="#45B7D1">Blue</option>
+                    <option value="#96CEB4">Green</option>
+                    <option value="#FFEAA7">Yellow</option>
+                    <option value="#DDA0DD">Purple</option>
+                    <option value="#FFB347">Orange</option>
+                </select>
+                <button id="addKeywordBtn">Add</button>
+            </div>
+        </div>
+
+        <div class="keywords-section">
+            <h3>Your Keywords</h3>
+            <div id="keywordsList" class="keywords-list">
+                <div class="empty-state">
+                    <p>No keywords added yet. Add your first keyword above!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="scanNowBtn" class="primary-btn">Scan Inbox Now</button>
+            <button id="clearAllBtn" class="secondary-btn">Clear All Keywords</button>
+        </div>
+
+        <div class="status" id="statusMessage"></div>
+    </div>
+
+    <script src="popup-demo.js"></script>
+</body>
+</html>
