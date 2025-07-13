@@ -40,3 +40,8 @@
 1. **Clone or Download** this repository:
    ```bash
    git clone https://github.com/Curry06/SmartFilter.git
+
+## 👥 Contributors
+
+- @Curry06 https://github.com/Curry06  — Idea , Testing
+- @Sabale302 https://github.com/Sabale302 — Coding , GUI , Keyword database, spam filter rules
