@@ -43,5 +43,5 @@
 
 ## 👥 Contributors
 
-- @Curry06 https://github.com/Curry06  — Idea , Testing
-- @Sabale302 https://github.com/Sabale302 — Coding , GUI , Keyword database, spam filter rules
+- [@Curry06](https://github.com/Curry06) — Idea, Testing
+- [@Sabale302](https://github.com/Sabale302) — Coding, GUI, Keyword database, Spam filter rules
